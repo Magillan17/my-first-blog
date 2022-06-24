@@ -5,23 +5,16 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">I'm lose game</a></h1>
-        </div>
-                aaaaa
-        <br>  <br>
-        <div>
-            <p>published: 24.06.2022, 12:14</p>
-            <h2><a href="">Anrey carry</a></h2>
-            <p>We lose this game. Andrey played on Mortred</p>
+        <h1><a href="/">Django Girls Blog</a></h1>
+        <br><br>
         </div>
 
-
-        <br>  <br>
-        <div>
-            <p>published: 24.06.2022, 12:16</p>
-            <h2><a href="">Anrey carry</a></h2>
-            <p>We lose this game. Andrey played on Naix</p>
-            <p> I deleted Dota_2</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
